@@ -47,6 +47,29 @@ namespace InventorySystem
             {
 
 
+                if ((int.Parse(textBoxAddProductMin.Text) > int.Parse(textBoxAddProductMax.Text)))
+                {
+
+
+                    throw new Exception("Min value must be smaller than max. Check input and try again.");
+
+
+
+                }
+
+
+                if (!(int.Parse(textBoxAddProductInStock.Text) > int.Parse(textBoxAddProductMin.Text) && int.Parse(textBoxAddProductInStock.Text) < int.Parse(textBoxAddProductMax.Text)))
+                {
+
+
+                    throw new Exception("Fix InStock Value. Must be between Min and Max.");
+
+
+
+                }
+
+
+
                 Product newProduct = new Product();
 
 
@@ -60,26 +83,6 @@ namespace InventorySystem
                 newProduct.Min = int.Parse(textBoxAddProductMin.Text);
 
 
-                if ((newProduct.Min > newProduct.Max))
-                {
-
-
-                    throw new Exception("Min value must be smaller than max. Check input and try again.");
-
-
-
-                }
-
-
-                if (!(newProduct.InStock > newProduct.Min && newProduct.InStock < newProduct.Max))
-                {
-
-
-                    throw new Exception("Fix InStock Value. Must be between Min and Max.");
-
-
-
-                }
 
 
 
@@ -182,7 +185,7 @@ namespace InventorySystem
 
                 PartsAdded.Remove((Part)row.DataBoundItem);
 
-
+                //
 
 
 

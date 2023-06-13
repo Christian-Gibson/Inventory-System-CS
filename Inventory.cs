@@ -195,26 +195,7 @@ namespace InventorySystem
        static public bool deletePart (Part partToDelete)
         {
 
-            /*
-            if (Inventory.AllParts.Contains(partToDelete))
-            {
-
-
-                Inventory.AllParts.Remove(partToDelete);
-                return true;
-
-
-
-
-
-
-            }
-            else
-            {
-
-                return false;
-
-            }*/
+        
 
             foreach(Product product in Products)
             {
@@ -292,82 +273,7 @@ namespace InventorySystem
         {
 
 
-            /*
-            if (partToUpdate is InHouse) { 
-
-
-                foreach (Part part in allParts)
-                {
-
-                        if (numUpdate == part.PartID)
-                        {
-
-                            part.InStock = partToUpdate.InStock;
-                            part.Name = partToUpdate.Name;
-                            part.Price = partToUpdate.Price;
-                            part.Min = partToUpdate.Min;
-                            part.Max = partToUpdate.Max;
-                             //   Inventory.GetMachineID((InHouse)partToUpdate);
-                             ((InHouse)part).MachineID = Inventory.GetMachineID((InHouse)partToUpdate);
-
-
-
-
-
-
-                    }
-
-
-
-
-
-
-
-
-                    }
-
-            }
-            else if (partToUpdate is Outsourced)
-            {
-
-
-
-                foreach (Part part in allParts)
-                {
-
-                    if (numUpdate == part.PartID)
-                    {
-
-                        part.InStock = partToUpdate.InStock;
-                        part.Name = partToUpdate.Name;
-                        part.Price = partToUpdate.Price;
-                        part.Min = partToUpdate.Min;
-                        part.Max = partToUpdate.Max;
-                        ((Outsourced)part).CompanyName = Inventory.GetCompanyName((Outsourced)partToUpdate);
-
-
-
-
-
-                    }
-
-
-
-
-
-
-
-
-                }
-
-
-
-
-
-
-            }
-            */
-
+           
 
             foreach(Part part in AllParts)
             {
@@ -488,40 +394,6 @@ namespace InventorySystem
 
 
 
-            /*
-            // newest
-            foreach (Product product in Products)
-            {
-
-                for (int i = 0; i < product.AssociatedParts.Count; ++i)
-                {
-
-                    if (product.AssociatedParts[i].PartID == outSourced.PartID)
-                    {
-
-                      //  product.AssociatedParts.RemoveAt(i);
-                        product.AssociatedParts.Add(inHouse); //
-                        break;
-
-                    }
-
-
-
-
-                }
-
-
-
-
-
-
-            }
-            //
-            */
-
-
-
-
 
             
             foreach (Part part in AllParts)
@@ -575,42 +447,6 @@ namespace InventorySystem
             outSourced.CompanyName = newCompanyName;
 
 
-
-            /*
-            // newest
-            foreach(Product product in Products)
-            {
-
-                for (int i = 0; i < product.AssociatedParts.Count; ++i)
-                {
-
-                    if(product.AssociatedParts[i].PartID == outSourced.PartID)
-                    {
-
-                      //  product.AssociatedParts.RemoveAt(i);
-                        product.AssociatedParts.Add(outSourced); //
-                        break; //
-                    }
-
-
-
-
-                }
-
-
-                
-
-
-
-            }
-            // newest
-            */
-
-
-
-
-
-           
 
 
 

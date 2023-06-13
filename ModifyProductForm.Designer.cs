@@ -275,7 +275,7 @@ namespace InventorySystem
             this.Controls.Add(this.labelModifyProductName);
             this.Controls.Add(this.labelModifyProductID);
             this.Name = "ModifyProductForm";
-            this.Text = "ModifyProductForm";
+            this.Text = "Modify Product";
             this.Load += new System.EventHandler(this.ModifyProductForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.modifyProductAssociatedPartsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modifyProductAllCandidatePartsDataGridView)).EndInit();

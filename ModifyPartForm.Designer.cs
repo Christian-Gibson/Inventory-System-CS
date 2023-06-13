@@ -230,7 +230,7 @@ namespace InventorySystem
             this.Controls.Add(this.textBoxModifyPartName);
             this.Controls.Add(this.textBoxModifyPartPartID);
             this.Name = "ModifyPartForm";
-            this.Text = "ModifyPartForm";
+            this.Text = "Modify Part";
             this.Load += new System.EventHandler(this.ModifyPartForm_Load);
             this.Leave += new System.EventHandler(this.ModifyPartForm_Leave);
             this.ResumeLayout(false);

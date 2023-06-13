@@ -60,6 +60,31 @@ namespace InventorySystem
                 {
 
 
+
+                    if ((int.Parse(textBoxPartMin.Text) > int.Parse(textBoxPartMax.Text)))
+                    {
+
+
+                        throw new Exception("Min value must be smaller than max. Check input and try again.");
+
+
+
+                    }
+
+                    if (!(int.Parse(textBoxPartInStock.Text) > int.Parse(textBoxPartMin.Text) && int.Parse(textBoxPartInStock.Text) < int.Parse(textBoxPartMax.Text)))
+                    {
+
+
+                        throw new Exception("Check InStock Value. Must be between Min and Max.");
+
+
+
+                    }
+
+
+
+
+
                     InHouse inHousePart = new InHouse();
 
 
@@ -74,25 +99,7 @@ namespace InventorySystem
                     inHousePart.Min = int.Parse(textBoxPartMin.Text);
                     inHousePart.MachineID = int.Parse(textBoxPartMachineID_CompanyName.Text);
 
-                    if ((inHousePart.Min > inHousePart.Max))
-                    {
-
-
-                        throw new Exception("Min value must be smaller than max. Check input and try again.");
-
-
-
-                    }
-
-                    if (!(inHousePart.InStock > inHousePart.Min && inHousePart.InStock < inHousePart.Max))
-                    {
-
-
-                        throw new Exception("Check InStock Value. Must be between Min and Max.");
-                       
-
-
-                    }
+                   
                     
 
 
@@ -136,9 +143,35 @@ namespace InventorySystem
             {
 
 
-                try { 
+                try {
 
-                Outsourced outSourcedPart = new Outsourced();
+
+
+                    if ((int.Parse(textBoxPartMin.Text)) > int.Parse(textBoxPartMin.Text))
+                    {
+
+
+                        throw new Exception("Min value must be smaller than max. Check input and try again.");
+
+
+
+                    }
+
+
+
+                    if (!(int.Parse(textBoxPartInStock.Text) > int.Parse(textBoxPartMin.Text) && int.Parse(textBoxPartInStock.Text) < int.Parse(textBoxPartMax.Text)))
+                    {
+
+
+                        throw new Exception("Fix InStock Value. Must be between Min and Max.");
+
+
+
+                    }
+
+
+
+                    Outsourced outSourcedPart = new Outsourced();
 
 
                 outSourcedPart.Name = textBoxPartName.Text;
@@ -153,28 +186,6 @@ namespace InventorySystem
                 outSourcedPart.CompanyName = textBoxPartMachineID_CompanyName.Text;
 
 
-                    if ((outSourcedPart.Min > outSourcedPart.Max))
-                    {
-
-
-                        throw new Exception("Min value must be smaller than max. Check input and try again.");
-
-
-
-                    }
-
-
-
-                    if (!(outSourcedPart.InStock > outSourcedPart.Min && outSourcedPart.InStock < outSourcedPart.Max)) 
-                    {
-
-
-                        throw new Exception("Fix InStock Value. Must be between Min and Max.");
-
-
-
-                    }
-                   
 
 
 

@@ -42,10 +42,6 @@ namespace InventorySystem
             partDataGridViewMain.DataSource = Inventory.AllParts;
             productDataGridViewMain.DataSource = Inventory.Products;
 
-            
-
-
-
 
         }
 
@@ -57,8 +53,6 @@ namespace InventorySystem
 
 
             Close();
-
-            
 
 
         }
@@ -122,18 +116,6 @@ namespace InventorySystem
 
 
 
-
-                    /*
-                    if (!Inventory.removeProduct(((Product)row.DataBoundItem).ProductID))
-                    {
-
-                        productDataGridViewMain.Rows.Remove(row);
-
-
-
-
-                    }
-                    */
 
                     goodToDelete = Inventory.removeProduct(((Product)row.DataBoundItem).ProductID);
 
@@ -334,7 +316,7 @@ namespace InventorySystem
 
                 }
 
-            } //
+            } 
 
 
         }
@@ -349,11 +331,11 @@ namespace InventorySystem
             //Test this soon
            // DataGridViewRowCollection collections = partDataGridViewMain.Rows;
 
-            DataGridViewSelectedRowCollection tlkj = partDataGridViewMain.SelectedRows;
+            DataGridViewSelectedRowCollection selectedPartCollection = partDataGridViewMain.SelectedRows;
 
             try { 
 
-                if (tlkj.Count > 1 || tlkj.Count == 0)
+                if (selectedPartCollection.Count > 1 || selectedPartCollection.Count == 0)
                 {
 
                     throw new Exception("Select only one part to modify.");
@@ -363,7 +345,7 @@ namespace InventorySystem
 
                
 
-                foreach (DataGridViewRow row in tlkj)
+                foreach (DataGridViewRow row in selectedPartCollection)
                 {
 
 
