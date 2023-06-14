@@ -62,7 +62,7 @@ namespace InventorySystem
                 {
 
 
-                    throw new Exception("Fix InStock Value. Must be between Min and Max.");
+                    throw new Exception("Fix InStock Value. InStock must be between Min and Max.");
 
 
 
