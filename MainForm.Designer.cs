@@ -29,6 +29,7 @@ namespace InventorySystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.addPartBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.productDataGridViewMain = new System.Windows.Forms.DataGridView();
@@ -199,6 +200,7 @@ namespace InventorySystem
             this.Controls.Add(this.productDataGridViewMain);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.addPartBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Inventory Management System";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
