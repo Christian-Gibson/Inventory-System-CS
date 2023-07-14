@@ -48,13 +48,14 @@ namespace InventorySystem
             // 
             // addPartBtn
             // 
+            this.addPartBtn.BackColor = System.Drawing.SystemColors.Control;
             this.addPartBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addPartBtn.Location = new System.Drawing.Point(109, 303);
             this.addPartBtn.Name = "addPartBtn";
             this.addPartBtn.Size = new System.Drawing.Size(94, 29);
             this.addPartBtn.TabIndex = 0;
             this.addPartBtn.Text = "Add Part";
-            this.addPartBtn.UseVisualStyleBackColor = true;
+            this.addPartBtn.UseVisualStyleBackColor = false;
             this.addPartBtn.Click += new System.EventHandler(this.addPartBtn_Click);
             // 
             // exitBtn
@@ -184,7 +185,7 @@ namespace InventorySystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(1202, 561);
             this.Controls.Add(this.searchProductBtn);
             this.Controls.Add(this.textBoxProductSearch);
