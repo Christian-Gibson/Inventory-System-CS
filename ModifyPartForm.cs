@@ -192,7 +192,7 @@ namespace InventorySystem
                         catch (FormatException excpt)
                         {
 
-                            MessageBox.Show("One or more input field(s) contains invalid data. Re-check entry.", "Modify Part Error- Part Not Saved!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                            MessageBox.Show("One or more input field(s) contains invalid data. Re-check entry.", "Modify Part Error - Part Not Saved!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                             Close();
 
 
@@ -201,7 +201,7 @@ namespace InventorySystem
                         catch (Exception excpt)
                         {
 
-                            MessageBox.Show(excpt.Message, "Modify Part Error- Part Not Saved!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                            MessageBox.Show(excpt.Message, "Modify Part Error - Part Not Saved!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                             Close();
 
 
