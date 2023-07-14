@@ -34,10 +34,10 @@ namespace InventorySystem
 
 
 
-            this.PartID = ++partID; //Increment the static variable partID (in abstract  ---- Part.cs)
+            this.PartID = ++partID; //Increment the static variable partID (in abstract ------- Part.cs)
 
 
-
+			//////////
 
 
 
