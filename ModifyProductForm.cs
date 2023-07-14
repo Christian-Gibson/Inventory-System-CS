@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+
+
 namespace InventorySystem
 {
     public partial class ModifyProductForm : Form
@@ -14,6 +16,14 @@ namespace InventorySystem
 
         BindingList<Part> partsModifyAdded = new BindingList<Part>();
         public DataGridViewSelectedRowCollection modifyProductSelections;
+
+
+
+        
+        
+
+
+
 
         public BindingList<Part> PartsModifyAdded
         {
@@ -155,7 +165,7 @@ namespace InventorySystem
                 {
 
 
-                    throw new Exception("Check input. InStock value must be between Min and Max.");
+                    throw new Exception("Check input. InStock value must be between Max and Min.");
 
 
 
